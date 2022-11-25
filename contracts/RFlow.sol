@@ -17,28 +17,31 @@ import "@openzeppelin/contracts/token/ERC1155/IERC1155.sol";
 import "@openzeppelin/contracts/token/ERC721/utils/ERC721Holder.sol";
 import "@openzeppelin/contracts/token/ERC1155/utils/ERC1155Receiver.sol";
 import "@openzeppelin/contracts/token/ERC1155/utils/ERC1155Holder.sol";
+import "@openzeppelin/contracts/utils/Counters.sol";
 
 contract RFlow is ERC721Holder, ERC1155Receiver, ERC1155Holder {
     using CFAv1Library for CFAv1Library.InitData;
+    using Counters for Counters.Counter;
 
     //initialize cfaV1 variable
     CFAv1Library.InitData public cfaLib;
 
     uint256 private lendingId = 1;
 
-    // single storage slot: address - 160 bits, 168, 200, 232, 240, 248
     struct Lending {
-        address payable lenderAddress;
+        uint256 id;
+        address lenderAddress;
         uint8 maxRentDuration;
         bytes4 dailyRentPrice;
         bytes4 nftPrice;
         uint8 lentAmount;
         ISuperToken paymentToken;
+        uint256 tokenId;
     }
 
-    // single storage slot: 160 bits, 168, 200
     struct Renting {
-        address payable renterAddress;
+        uint256 id;
+        address renterAddress;
         uint8 rentDuration;
         uint32 rentedAt;
     }
@@ -48,7 +51,7 @@ contract RFlow is ERC721Holder, ERC1155Receiver, ERC1155Holder {
         Renting renting;
     }
 
-    mapping(bytes32 => LendingRenting) private lendingRenting;
+    mapping(uint256 => LendingRenting) private lendingRenting;
 
     constructor(ISuperfluid host) {
         //initialize InitData struct, and set equal to cfaV1
@@ -69,27 +72,48 @@ contract RFlow is ERC721Holder, ERC1155Receiver, ERC1155Holder {
 
     // function to create a flow with the user data through renting
     function lend(
-        address memory _nfts,
-        uint256 memory _tokenIds,
-        uint256 memory _lendAmounts,
-        uint8 memory _maxRentDurations,
-        bytes4 memory _dailyRentPrices,
-        bytes4 memory _nftPrices,
+        address _nfts,
+        uint256 _tokenIds,
+        uint256 _lendAmounts,
+        uint8 _maxRentDurations,
+        bytes4 _dailyRentPrices,
+        bytes4 _nftPrices,
         ISuperToken memory _paymentTokens
-    ) external override notPaused {
-        bundleCall(
-            handleLend,
-            createLendCallData(
-                _nfts,
-                _tokenIds,
-                _lendAmounts,
+    ) external {
+        lendingRenting[lendingId.current()] = LendingRenting(
+            Lending(
+                lendingId.current(),
+                msg.sender,
                 _maxRentDurations,
                 _dailyRentPrices,
                 _nftPrices,
-                _paymentTokens
+                _lendAmounts,
+                _paymentTokens,
+                _tokenIds
             )
         );
+
+        doLending(msg.sender, lendingId);
+        lendingId.increment();
     }
+
     // function to update a flow with the user data through renting or after renting
     // function to delete a flow with the user data after the rent is over
+    // create a flow with the user data
+
+    // actions
+
+    function doLending(address lender, uint256 _lendingId) external {
+        require(
+            _lendingId == lendingRenting[_lendingId],
+            "Lending ID is not valid"
+        );
+        // transfer the NFT to the contract
+        _transfer(
+            address(this),
+            lender,
+            lendingRenting[_lendingId].lending.tokenId
+        );
+        // emit an event
+    }
 }
