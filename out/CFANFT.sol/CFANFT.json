@@ -1,0 +1,1931 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "contract ISuperfluid",
+          "name": "host",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [],
+      "name": "cfaV1",
+      "outputs": [
+        {
+          "internalType": "contract ISuperfluid",
+          "name": "host",
+          "type": "address"
+        },
+        {
+          "internalType": "contract IConstantFlowAgreementV1",
+          "name": "cfa",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "receiver",
+          "type": "address"
+        },
+        {
+          "internalType": "contract ISuperfluidToken",
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "internalType": "int96",
+          "name": "flowRate",
+          "type": "int96"
+        }
+      ],
+      "name": "createFlowByOperatorTest",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "receiver",
+          "type": "address"
+        },
+        {
+          "internalType": "contract ISuperfluidToken",
+          "name": "token",
+          "type": "address"
+        }
+      ],
+      "name": "deleteFlowByOperator",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "renft",
+      "outputs": [
+        {
+          "internalType": "contract IReNft",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "resolver",
+      "outputs": [
+        {
+          "internalType": "contract IResolver",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "receiver",
+          "type": "address"
+        },
+        {
+          "internalType": "contract ISuperfluidToken",
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "internalType": "int96",
+          "name": "flowRate",
+          "type": "int96"
+        }
+      ],
+      "name": "updateFlowByOperatorTest",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x608060405234801561001057600080fd5b5060405161082c38038061082c83398101604081905261002f91610169565b600080546001600160a01b03199081167394d8f036a0fbc216bb532d33bdf6564157af0cd7179091556001805490911673945e589a4715d1915e6fe14f08e4887bc40193411790556040805180820182526001600160a01b0383168082529151635b69006f60e11b81527fa9214cc96615e0085d3bb077758db69497dc2dce3b2b1e97bc93c3d18d83efd360048201529091602083019163b6d200de90602401602060405180830381865afa1580156100ec573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906101109190610169565b6001600160a01b039081169091528151600280546001600160a01b03199081169284169290921790556020909201516003805490931691161790555061018d565b6001600160a01b038116811461016657600080fd5b50565b60006020828403121561017b57600080fd5b815161018681610151565b9392505050565b6106908061019c6000396000f3fe608060405234801561001057600080fd5b50600436106100625760003560e01c806304f3bcec1461006757806380f742fa146100975780638aaf4513146100ac578063a1653c74146100bf578063d3112b2e146100d2578063ef7074901461010c575b600080fd5b60015461007a906001600160a01b031681565b6040516001600160a01b0390911681526020015b60405180910390f35b6100aa6100a53660046103fc565b61011f565b005b6100aa6100ba3660046103fc565b610134565b60005461007a906001600160a01b031681565b6002546003546100ec916001600160a01b03908116911682565b604080516001600160a01b0393841681529290911660208301520161008e565b6100aa61011a36600461045f565b610142565b61012d600285858585610155565b5050505050565b61012d600285858585610184565b61014f60028484846101a9565b50505050565b60408051600081526020810190915260609061017a90879087908790879087906101d5565b9695505050505050565b60408051600081526020810190915260609061017a90879087908790879087906102db565b6040805160008152602081019091526060906101cc908690869086908690610309565b95945050505050565b855460018701546060916001600160a01b03908116916339255d5b91168063354b9590888b8b8a60005b6040519080825280601f01601f191660200182016040528015610229576020820181803683370190505b5060405160240161023e959493929190610510565b60408051808303601f1901815291815260208201805160e094851b6001600160e01b03909116179052519185901b6001600160e01b031916825261028993925090879060040161054e565b6000604051808303816000875af11580156102a8573d6000803e3d6000fd5b505050506040513d6000823e601f3d908101601f191682016040526102d09190810190610584565b979650505050505050565b855460018701546060916001600160a01b03908116916339255d5b9116806394229ecb888b8b8a60006101ff565b845460018601546040805160008152602081019091526060926001600160a01b03908116926339255d5b929116908190634c8b181f906103529089908c908c9060448101610626565b60408051808303601f1901815291815260208201805160e094851b6001600160e01b03909116179052519185901b6001600160e01b031916825261039d93925090879060040161054e565b6000604051808303816000875af11580156103bc573d6000803e3d6000fd5b505050506040513d6000823e601f3d908101601f1916820160405261017a9190810190610584565b6001600160a01b03811681146103f957600080fd5b50565b6000806000806080858703121561041257600080fd5b843561041d816103e4565b9350602085013561042d816103e4565b9250604085013561043d816103e4565b91506060850135600b81900b811461045457600080fd5b939692955090935050565b60008060006060848603121561047457600080fd5b833561047f816103e4565b9250602084013561048f816103e4565b9150604084013561049f816103e4565b809150509250925092565b634e487b7160e01b600052604160045260246000fd5b60005b838110156104db5781810151838201526020016104c3565b50506000910152565b600081518084526104fc8160208601602086016104c0565b601f01601f19169290920160200192915050565b6001600160a01b038681168252858116602083015284166040820152600b83900b606082015260a0608082018190526000906102d0908301846104e4565b6001600160a01b0384168152606060208201819052600090610572908301856104e4565b828103604084015261017a81856104e4565b60006020828403121561059657600080fd5b815167ffffffffffffffff808211156105ae57600080fd5b818401915084601f8301126105c257600080fd5b8151818111156105d4576105d46104aa565b604051601f8201601f19908116603f011681019083821181831017156105fc576105fc6104aa565b8160405282815287602084870101111561061557600080fd5b6102d08360208301602088016104c0565b6001600160a01b03858116825284811660208301528316604082015260806060820181905260009061017a908301846104e456fea2646970667358221220b6e6e834fb3f0b273bbbad7b0ed162045385641b8578283ce4484437712bc02364736f6c63430008100033",
+    "sourceMap": "726:1763:0:-:0;;;1011:803;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;1112:5;:67;;-1:-1:-1;;;;;;1112:67:0;;;1135:42;1112:67;;;;-1:-1:-1;1189:95:0;;;;;1231:42;1189:95;;;1363:444;;;;;;;;-1:-1:-1;;;;;1363:444:0;;;;;1570:195;;-1:-1:-1;;;1570:195:0;;1618:125;1570:195;;;599:25:50;1363:444:0;;;;;;1570:22;;572:18:50;;1570:195:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;-1:-1:-1;;;;;1363:444:0;;;;;;1355:452;;:5;:452;;-1:-1:-1;;;;;;1355:452:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;726:1763:0;;14:144:50;-1:-1:-1;;;;;102:31:50;;92:42;;82:70;;148:1;145;138:12;82:70;14:144;:::o;163:285::-;254:6;307:2;295:9;286:7;282:23;278:32;275:52;;;323:1;320;313:12;275:52;355:9;349:16;374:44;412:5;374:44;:::i;:::-;437:5;163:285;-1:-1:-1;;;163:285:50:o;635:289::-;726:1763:0;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x608060405234801561001057600080fd5b50600436106100625760003560e01c806304f3bcec1461006757806380f742fa146100975780638aaf4513146100ac578063a1653c74146100bf578063d3112b2e146100d2578063ef7074901461010c575b600080fd5b60015461007a906001600160a01b031681565b6040516001600160a01b0390911681526020015b60405180910390f35b6100aa6100a53660046103fc565b61011f565b005b6100aa6100ba3660046103fc565b610134565b60005461007a906001600160a01b031681565b6002546003546100ec916001600160a01b03908116911682565b604080516001600160a01b0393841681529290911660208301520161008e565b6100aa61011a36600461045f565b610142565b61012d600285858585610155565b5050505050565b61012d600285858585610184565b61014f60028484846101a9565b50505050565b60408051600081526020810190915260609061017a90879087908790879087906101d5565b9695505050505050565b60408051600081526020810190915260609061017a90879087908790879087906102db565b6040805160008152602081019091526060906101cc908690869086908690610309565b95945050505050565b855460018701546060916001600160a01b03908116916339255d5b91168063354b9590888b8b8a60005b6040519080825280601f01601f191660200182016040528015610229576020820181803683370190505b5060405160240161023e959493929190610510565b60408051808303601f1901815291815260208201805160e094851b6001600160e01b03909116179052519185901b6001600160e01b031916825261028993925090879060040161054e565b6000604051808303816000875af11580156102a8573d6000803e3d6000fd5b505050506040513d6000823e601f3d908101601f191682016040526102d09190810190610584565b979650505050505050565b855460018701546060916001600160a01b03908116916339255d5b9116806394229ecb888b8b8a60006101ff565b845460018601546040805160008152602081019091526060926001600160a01b03908116926339255d5b929116908190634c8b181f906103529089908c908c9060448101610626565b60408051808303601f1901815291815260208201805160e094851b6001600160e01b03909116179052519185901b6001600160e01b031916825261039d93925090879060040161054e565b6000604051808303816000875af11580156103bc573d6000803e3d6000fd5b505050506040513d6000823e601f3d908101601f1916820160405261017a9190810190610584565b6001600160a01b03811681146103f957600080fd5b50565b6000806000806080858703121561041257600080fd5b843561041d816103e4565b9350602085013561042d816103e4565b9250604085013561043d816103e4565b91506060850135600b81900b811461045457600080fd5b939692955090935050565b60008060006060848603121561047457600080fd5b833561047f816103e4565b9250602084013561048f816103e4565b9150604084013561049f816103e4565b809150509250925092565b634e487b7160e01b600052604160045260246000fd5b60005b838110156104db5781810151838201526020016104c3565b50506000910152565b600081518084526104fc8160208601602086016104c0565b601f01601f19169290920160200192915050565b6001600160a01b038681168252858116602083015284166040820152600b83900b606082015260a0608082018190526000906102d0908301846104e4565b6001600160a01b0384168152606060208201819052600090610572908301856104e4565b828103604084015261017a81856104e4565b60006020828403121561059657600080fd5b815167ffffffffffffffff808211156105ae57600080fd5b818401915084601f8301126105c257600080fd5b8151818111156105d4576105d46104aa565b604051601f8201601f19908116603f011681019083821181831017156105fc576105fc6104aa565b8160405282815287602084870101111561061557600080fd5b6102d08360208301602088016104c0565b6001600160a01b03858116825284811660208301528316604082015260806060820181905260009061017a908301846104e456fea2646970667358221220b6e6e834fb3f0b273bbbad7b0ed162045385641b8578283ce4484437712bc02364736f6c63430008100033",
+    "sourceMap": "726:1763:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;906:25;;;;;-1:-1:-1;;;;;906:25:0;;;;;;-1:-1:-1;;;;;195:32:50;;;177:51;;165:2;150:18;906:25:0;;;;;;;;2057:231;;;;;;:::i;:::-;;:::i;:::-;;1820;;;;;;:::i;:::-;;:::i;839:19::-;;;;;-1:-1:-1;;;;;839:19:0;;;970:34;;;;;;;-1:-1:-1;;;;;970:34:0;;;;;;;;;;;-1:-1:-1;;;;;1613:15:50;;;1595:34;;1665:15;;;;1660:2;1645:18;;1638:43;1530:18;970:34:0;1328:359:50;2294:193:0;;;;;;:::i;:::-;;:::i;2057:231::-;2220:61;:5;2247:6;2255:8;2265:5;2272:8;2220:26;:61::i;:::-;;2057:231;;;;:::o;1820:::-;1983:61;:5;2010:6;2018:8;2028:5;2035:8;1983:26;:61::i;2294:193::-;2429:51;:5;2456:6;2464:8;2474:5;2429:26;:51::i;:::-;;2294:193;;;:::o;13777:323:36:-;14080:12;;;14090:1;14080:12;;;;;;;;13974:19;;14012:81;;14033:10;;14045:6;;14053:8;;14063:5;;14070:8;;14012:20;:81::i;:::-;14005:88;13777:323;-1:-1:-1;;;;;;13777:323:36:o;10112:::-;10415:12;;;10425:1;10415:12;;;;;;;;10309:19;;10347:81;;10368:10;;10380:6;;10388:8;;10398:5;;10405:8;;10347:20;:81::i;17370:289::-;17639:12;;;17649:1;17639:12;;;;;;;;17543:19;;17581:71;;17602:10;;17614:6;;17622:8;;17632:5;;17581:20;:71::i;:::-;17574:78;17370:289;-1:-1:-1;;;;;17370:289:36:o;14453:642::-;14719:15;;;14762:14;;;14681:19;;-1:-1:-1;;;;;14719:15:36;;;;:29;;14762:14;;14822:35;14897:5;14924:6;14952:8;14982;14719:15;15012:12;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;15012:12:36;;14790:266;;;;;;;;;;;;:::i;:::-;;;;;;;-1:-1:-1;;14790:266:36;;;;;;;;;;;;;;;-1:-1:-1;;;;;14790:266:36;;;;;;14719:369;;;;;-1:-1:-1;;;;;;14719:369:36;;;;;;-1:-1:-1;14790:266:36;15070:8;;14719:369;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;14719:369:36;;;;;;;;;;;;:::i;:::-;14712:376;14453:642;-1:-1:-1;;;;;;;14453:642:36:o;10788:657::-;11054:15;;;11097:14;;;11016:19;;-1:-1:-1;;;;;11054:15:36;;;;:29;;11097:14;;11157:35;11232:5;11259:6;11287:8;11317;11054:15;11347:12;;17970:588;18212:15;;;18255:14;;;18475:12;;;18212:15;18475:12;;;;;;;;18174:19;;-1:-1:-1;;;;;18212:15:36;;;;:29;;18255:14;;;;;18315:35;;18283:236;;18390:5;;18417:6;;18445:8;;18283:236;;;;:::i;:::-;;;;;;;-1:-1:-1;;18283:236:36;;;;;;;;;;;;;;;-1:-1:-1;;;;;18283:236:36;;;;;;18212:339;;;;;-1:-1:-1;;;;;;18212:339:36;;;;;;-1:-1:-1;18283:236:36;18533:8;;18212:339;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;18212:339:36;;;;;;;;;;;;:::i;239:131:50:-;-1:-1:-1;;;;;314:31:50;;304:42;;294:70;;360:1;357;350:12;294:70;239:131;:::o;375:726::-;485:6;493;501;509;562:3;550:9;541:7;537:23;533:33;530:53;;;579:1;576;569:12;530:53;618:9;605:23;637:31;662:5;637:31;:::i;:::-;687:5;-1:-1:-1;744:2:50;729:18;;716:32;757:33;716:32;757:33;:::i;:::-;809:7;-1:-1:-1;868:2:50;853:18;;840:32;881:33;840:32;881:33;:::i;:::-;933:7;-1:-1:-1;992:2:50;977:18;;964:32;1038:2;1027:23;;;1015:36;;1005:64;;1065:1;1062;1055:12;1005:64;375:726;;;;-1:-1:-1;375:726:50;;-1:-1:-1;;375:726:50:o;1692:555::-;1795:6;1803;1811;1864:2;1852:9;1843:7;1839:23;1835:32;1832:52;;;1880:1;1877;1870:12;1832:52;1919:9;1906:23;1938:31;1963:5;1938:31;:::i;:::-;1988:5;-1:-1:-1;2045:2:50;2030:18;;2017:32;2058:33;2017:32;2058:33;:::i;:::-;2110:7;-1:-1:-1;2169:2:50;2154:18;;2141:32;2182:33;2141:32;2182:33;:::i;:::-;2234:7;2224:17;;;1692:555;;;;;:::o;2252:127::-;2313:10;2308:3;2304:20;2301:1;2294:31;2344:4;2341:1;2334:15;2368:4;2365:1;2358:15;2384:250;2469:1;2479:113;2493:6;2490:1;2487:13;2479:113;;;2569:11;;;2563:18;2550:11;;;2543:39;2515:2;2508:10;2479:113;;;-1:-1:-1;;2626:1:50;2608:16;;2601:27;2384:250::o;2639:270::-;2680:3;2718:5;2712:12;2745:6;2740:3;2733:19;2761:76;2830:6;2823:4;2818:3;2814:14;2807:4;2800:5;2796:16;2761:76;:::i;:::-;2891:2;2870:15;-1:-1:-1;;2866:29:50;2857:39;;;;2898:4;2853:50;;2639:270;-1:-1:-1;;2639:270:50:o;2914:607::-;-1:-1:-1;;;;;3233:15:50;;;3215:34;;3285:15;;;3280:2;3265:18;;3258:43;3337:15;;3332:2;3317:18;;3310:43;3400:2;3389:22;;;3384:2;3369:18;;3362:50;3195:3;3443;3428:19;;3421:32;;;3158:4;;3470:45;;3495:19;;3487:6;3470:45;:::i;3526:508::-;-1:-1:-1;;;;;3781:32:50;;3763:51;;3850:2;3845;3830:18;;3823:30;;;-1:-1:-1;;3876:44:50;;3901:18;;3893:6;3876:44;:::i;:::-;3968:9;3960:6;3956:22;3951:2;3940:9;3936:18;3929:50;3996:32;4021:6;4013;3996:32;:::i;4039:896::-;4118:6;4171:2;4159:9;4150:7;4146:23;4142:32;4139:52;;;4187:1;4184;4177:12;4139:52;4220:9;4214:16;4249:18;4290:2;4282:6;4279:14;4276:34;;;4306:1;4303;4296:12;4276:34;4344:6;4333:9;4329:22;4319:32;;4389:7;4382:4;4378:2;4374:13;4370:27;4360:55;;4411:1;4408;4401:12;4360:55;4440:2;4434:9;4462:2;4458;4455:10;4452:36;;;4468:18;;:::i;:::-;4543:2;4537:9;4511:2;4597:13;;-1:-1:-1;;4593:22:50;;;4617:2;4589:31;4585:40;4573:53;;;4641:18;;;4661:22;;;4638:46;4635:72;;;4687:18;;:::i;:::-;4727:10;4723:2;4716:22;4762:2;4754:6;4747:18;4802:7;4797:2;4792;4788;4784:11;4780:20;4777:33;4774:53;;;4823:1;4820;4813:12;4774:53;4836:68;4901:2;4896;4888:6;4884:15;4879:2;4875;4871:11;4836:68;:::i;4940:523::-;-1:-1:-1;;;;;5235:15:50;;;5217:34;;5287:15;;;5282:2;5267:18;;5260:43;5339:15;;5334:2;5319:18;;5312:43;5391:3;5386:2;5371:18;;5364:31;;;5160:4;;5412:45;;5437:19;;5429:6;5412:45;:::i",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "cfaV1()": "d3112b2e",
+    "createFlowByOperatorTest(address,address,address,int96)": "8aaf4513",
+    "deleteFlowByOperator(address,address,address)": "ef707490",
+    "renft()": "a1653c74",
+    "resolver()": "04f3bcec",
+    "updateFlowByOperatorTest(address,address,address,int96)": "80f742fa"
+  },
+  "ast": {
+    "absolutePath": "contracts/CFANFT.sol",
+    "id": 133,
+    "exportedSymbols": {
+      "Address": [
+        30081
+      ],
+      "CFANFT": [
+        132
+      ],
+      "CFAv1Library": [
+        31319
+      ],
+      "IConstantFlowAgreementV1": [
+        31699
+      ],
+      "IERC1155": [
+        28330
+      ],
+      "IERC1155Receiver": [
+        28371
+      ],
+      "IERC165": [
+        30139
+      ],
+      "IERC20": [
+        29120
+      ],
+      "IERC20Permit": [
+        29181
+      ],
+      "IERC721": [
+        29578
+      ],
+      "IERC721Receiver": [
+        29596
+      ],
+      "IReNft": [
+        278
+      ],
+      "IResolver": [
+        303
+      ],
+      "ISuperfluid": [
+        33353
+      ],
+      "ISuperfluidToken": [
+        33768
+      ],
+      "SafeERC20": [
+        29462
+      ],
+      "console": [
+        41866
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "39:2451:0",
+    "nodes": [
+      {
+        "id": 1,
+        "nodeType": "PragmaDirective",
+        "src": "39:23:0",
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".9"
+        ]
+      },
+      {
+        "id": 2,
+        "nodeType": "ImportDirective",
+        "src": "106:29:0",
+        "absolutePath": "node_modules/hardhat/console.sol",
+        "file": "hardhat/console.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 133,
+        "sourceUnit": 41867,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 4,
+        "nodeType": "ImportDirective",
+        "src": "168:115:0",
+        "absolutePath": "node_modules/@superfluid-finance/ethereum-contracts/contracts/interfaces/superfluid/ISuperfluid.sol",
+        "file": "@superfluid-finance/ethereum-contracts/contracts/interfaces/superfluid/ISuperfluid.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 133,
+        "sourceUnit": 33354,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 3,
+              "name": "ISuperfluid",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 33353,
+              "src": "176:11:0",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 6,
+        "nodeType": "ImportDirective",
+        "src": "284:141:0",
+        "absolutePath": "node_modules/@superfluid-finance/ethereum-contracts/contracts/interfaces/agreements/IConstantFlowAgreementV1.sol",
+        "file": "@superfluid-finance/ethereum-contracts/contracts/interfaces/agreements/IConstantFlowAgreementV1.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 133,
+        "sourceUnit": 31700,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 5,
+              "name": "IConstantFlowAgreementV1",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 31699,
+              "src": "292:24:0",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 8,
+        "nodeType": "ImportDirective",
+        "src": "426:125:0",
+        "absolutePath": "node_modules/@superfluid-finance/ethereum-contracts/contracts/interfaces/superfluid/ISuperfluidToken.sol",
+        "file": "@superfluid-finance/ethereum-contracts/contracts/interfaces/superfluid/ISuperfluidToken.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 133,
+        "sourceUnit": 33769,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 7,
+              "name": "ISuperfluidToken",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 33768,
+              "src": "434:16:0",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 10,
+        "nodeType": "ImportDirective",
+        "src": "552:100:0",
+        "absolutePath": "node_modules/@superfluid-finance/ethereum-contracts/contracts/apps/CFAv1Library.sol",
+        "file": "@superfluid-finance/ethereum-contracts/contracts/apps/CFAv1Library.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 133,
+        "sourceUnit": 31320,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 9,
+              "name": "CFAv1Library",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 31319,
+              "src": "560:12:0",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 11,
+        "nodeType": "ImportDirective",
+        "src": "654:33:0",
+        "absolutePath": "contracts/interfaces/IReNFT.sol",
+        "file": "./interfaces/IReNFT.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 133,
+        "sourceUnit": 279,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 12,
+        "nodeType": "ImportDirective",
+        "src": "688:36:0",
+        "absolutePath": "contracts/interfaces/IResolver.sol",
+        "file": "./interfaces/IResolver.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 133,
+        "sourceUnit": 304,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 132,
+        "nodeType": "ContractDefinition",
+        "src": "726:1763:0",
+        "nodes": [
+          {
+            "id": 16,
+            "nodeType": "UsingForDirective",
+            "src": "748:45:0",
+            "global": false,
+            "libraryName": {
+              "id": 13,
+              "name": "CFAv1Library",
+              "nameLocations": [
+                "754:12:0"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 31319,
+              "src": "754:12:0"
+            },
+            "typeName": {
+              "id": 15,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 14,
+                "name": "CFAv1Library.InitData",
+                "nameLocations": [
+                  "771:12:0",
+                  "784:8:0"
+                ],
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 30154,
+                "src": "771:21:0"
+              },
+              "referencedDeclaration": 30154,
+              "src": "771:21:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_InitData_$30154_storage_ptr",
+                "typeString": "struct CFAv1Library.InitData"
+              }
+            }
+          },
+          {
+            "id": 19,
+            "nodeType": "VariableDeclaration",
+            "src": "839:19:0",
+            "constant": false,
+            "functionSelector": "a1653c74",
+            "mutability": "mutable",
+            "name": "renft",
+            "nameLocation": "853:5:0",
+            "scope": 132,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_IReNft_$278",
+              "typeString": "contract IReNft"
+            },
+            "typeName": {
+              "id": 18,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 17,
+                "name": "IReNft",
+                "nameLocations": [
+                  "839:6:0"
+                ],
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 278,
+                "src": "839:6:0"
+              },
+              "referencedDeclaration": 278,
+              "src": "839:6:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IReNft_$278",
+                "typeString": "contract IReNft"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 22,
+            "nodeType": "VariableDeclaration",
+            "src": "906:25:0",
+            "constant": false,
+            "functionSelector": "04f3bcec",
+            "mutability": "mutable",
+            "name": "resolver",
+            "nameLocation": "923:8:0",
+            "scope": 132,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_IResolver_$303",
+              "typeString": "contract IResolver"
+            },
+            "typeName": {
+              "id": 21,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 20,
+                "name": "IResolver",
+                "nameLocations": [
+                  "906:9:0"
+                ],
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 303,
+                "src": "906:9:0"
+              },
+              "referencedDeclaration": 303,
+              "src": "906:9:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IResolver_$303",
+                "typeString": "contract IResolver"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 25,
+            "nodeType": "VariableDeclaration",
+            "src": "970:34:0",
+            "constant": false,
+            "functionSelector": "d3112b2e",
+            "mutability": "mutable",
+            "name": "cfaV1",
+            "nameLocation": "999:5:0",
+            "scope": 132,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_InitData_$30154_storage",
+              "typeString": "struct CFAv1Library.InitData"
+            },
+            "typeName": {
+              "id": 24,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 23,
+                "name": "CFAv1Library.InitData",
+                "nameLocations": [
+                  "970:12:0",
+                  "983:8:0"
+                ],
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 30154,
+                "src": "970:21:0"
+              },
+              "referencedDeclaration": 30154,
+              "src": "970:21:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_InitData_$30154_storage_ptr",
+                "typeString": "struct CFAv1Library.InitData"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 68,
+            "nodeType": "FunctionDefinition",
+            "src": "1011:803:0",
+            "body": {
+              "id": 67,
+              "nodeType": "Block",
+              "src": "1041:773:0",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 38,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 31,
+                      "name": "renft",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 19,
+                      "src": "1112:5:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IReNft_$278",
+                        "typeString": "contract IReNft"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "arguments": [
+                        {
+                          "arguments": [
+                            {
+                              "hexValue": "307839344438663033366130666243323136426235333244333362444636353634313537416630634437",
+                              "id": 35,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "1135:42:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              },
+                              "value": "0x94D8f036a0fbC216Bb532D33bDF6564157Af0cD7"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            ],
+                            "id": 34,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "1127:7:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_address_$",
+                              "typeString": "type(address)"
+                            },
+                            "typeName": {
+                              "id": 33,
+                              "name": "address",
+                              "nodeType": "ElementaryTypeName",
+                              "src": "1127:7:0",
+                              "typeDescriptions": {}
+                            }
+                          },
+                          "id": 36,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "nameLocations": [],
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1127:51:0",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 32,
+                        "name": "IReNft",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 278,
+                        "src": "1120:6:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_IReNft_$278_$",
+                          "typeString": "type(contract IReNft)"
+                        }
+                      },
+                      "id": 37,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "nameLocations": [],
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1120:59:0",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IReNft_$278",
+                        "typeString": "contract IReNft"
+                      }
+                    },
+                    "src": "1112:67:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IReNft_$278",
+                      "typeString": "contract IReNft"
+                    }
+                  },
+                  "id": 39,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1112:67:0"
+                },
+                {
+                  "expression": {
+                    "id": 47,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 40,
+                      "name": "resolver",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 22,
+                      "src": "1189:8:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IResolver_$303",
+                        "typeString": "contract IResolver"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "arguments": [
+                        {
+                          "arguments": [
+                            {
+                              "hexValue": "307839343545353839413437313564313931356536464531346630386534383837426334303139333431",
+                              "id": 44,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "1231:42:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              },
+                              "value": "0x945E589A4715d1915e6FE14f08e4887Bc4019341"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            ],
+                            "id": 43,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "1223:7:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_address_$",
+                              "typeString": "type(address)"
+                            },
+                            "typeName": {
+                              "id": 42,
+                              "name": "address",
+                              "nodeType": "ElementaryTypeName",
+                              "src": "1223:7:0",
+                              "typeDescriptions": {}
+                            }
+                          },
+                          "id": 45,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "nameLocations": [],
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1223:51:0",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 41,
+                        "name": "IResolver",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 303,
+                        "src": "1200:9:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_IResolver_$303_$",
+                          "typeString": "type(contract IResolver)"
+                        }
+                      },
+                      "id": 46,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "nameLocations": [],
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1200:84:0",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IResolver_$303",
+                        "typeString": "contract IResolver"
+                      }
+                    },
+                    "src": "1189:95:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IResolver_$303",
+                      "typeString": "contract IResolver"
+                    }
+                  },
+                  "id": 48,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1189:95:0"
+                },
+                {
+                  "expression": {
+                    "id": 65,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 49,
+                      "name": "cfaV1",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 25,
+                      "src": "1355:5:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_InitData_$30154_storage",
+                        "typeString": "struct CFAv1Library.InitData storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "arguments": [
+                        {
+                          "id": 52,
+                          "name": "host",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 28,
+                          "src": "1398:4:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_ISuperfluid_$33353",
+                            "typeString": "contract ISuperfluid"
+                          }
+                        },
+                        {
+                          "arguments": [
+                            {
+                              "arguments": [
+                                {
+                                  "arguments": [
+                                    {
+                                      "arguments": [
+                                        {
+                                          "hexValue": "6f72672e7375706572666c7569642d66696e616e63652e61677265656d656e74732e436f6e7374616e74466c6f7741677265656d656e742e7631",
+                                          "id": 59,
+                                          "isConstant": false,
+                                          "isLValue": false,
+                                          "isPure": true,
+                                          "kind": "string",
+                                          "lValueRequested": false,
+                                          "nodeType": "Literal",
+                                          "src": "1657:60:0",
+                                          "typeDescriptions": {
+                                            "typeIdentifier": "t_stringliteral_a9214cc96615e0085d3bb077758db69497dc2dce3b2b1e97bc93c3d18d83efd3",
+                                            "typeString": "literal_string \"org.superfluid-finance.agreements.ConstantFlowAgreement.v1\""
+                                          },
+                                          "value": "org.superfluid-finance.agreements.ConstantFlowAgreement.v1"
+                                        }
+                                      ],
+                                      "expression": {
+                                        "argumentTypes": [
+                                          {
+                                            "typeIdentifier": "t_stringliteral_a9214cc96615e0085d3bb077758db69497dc2dce3b2b1e97bc93c3d18d83efd3",
+                                            "typeString": "literal_string \"org.superfluid-finance.agreements.ConstantFlowAgreement.v1\""
+                                          }
+                                        ],
+                                        "id": 58,
+                                        "name": "keccak256",
+                                        "nodeType": "Identifier",
+                                        "overloadedDeclarations": [],
+                                        "referencedDeclaration": -8,
+                                        "src": "1618:9:0",
+                                        "typeDescriptions": {
+                                          "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                                          "typeString": "function (bytes memory) pure returns (bytes32)"
+                                        }
+                                      },
+                                      "id": 60,
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": true,
+                                      "kind": "functionCall",
+                                      "lValueRequested": false,
+                                      "nameLocations": [],
+                                      "names": [],
+                                      "nodeType": "FunctionCall",
+                                      "src": "1618:125:0",
+                                      "tryCall": false,
+                                      "typeDescriptions": {
+                                        "typeIdentifier": "t_bytes32",
+                                        "typeString": "bytes32"
+                                      }
+                                    }
+                                  ],
+                                  "expression": {
+                                    "argumentTypes": [
+                                      {
+                                        "typeIdentifier": "t_bytes32",
+                                        "typeString": "bytes32"
+                                      }
+                                    ],
+                                    "expression": {
+                                      "id": 56,
+                                      "name": "host",
+                                      "nodeType": "Identifier",
+                                      "overloadedDeclarations": [],
+                                      "referencedDeclaration": 28,
+                                      "src": "1570:4:0",
+                                      "typeDescriptions": {
+                                        "typeIdentifier": "t_contract$_ISuperfluid_$33353",
+                                        "typeString": "contract ISuperfluid"
+                                      }
+                                    },
+                                    "id": 57,
+                                    "isConstant": false,
+                                    "isLValue": false,
+                                    "isPure": false,
+                                    "lValueRequested": false,
+                                    "memberLocation": "1575:17:0",
+                                    "memberName": "getAgreementClass",
+                                    "nodeType": "MemberAccess",
+                                    "referencedDeclaration": 32990,
+                                    "src": "1570:22:0",
+                                    "typeDescriptions": {
+                                      "typeIdentifier": "t_function_external_view$_t_bytes32_$returns$_t_contract$_ISuperAgreement_$32189_$",
+                                      "typeString": "function (bytes32) view external returns (contract ISuperAgreement)"
+                                    }
+                                  },
+                                  "id": 61,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "kind": "functionCall",
+                                  "lValueRequested": false,
+                                  "nameLocations": [],
+                                  "names": [],
+                                  "nodeType": "FunctionCall",
+                                  "src": "1570:195:0",
+                                  "tryCall": false,
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_contract$_ISuperAgreement_$32189",
+                                    "typeString": "contract ISuperAgreement"
+                                  }
+                                }
+                              ],
+                              "expression": {
+                                "argumentTypes": [
+                                  {
+                                    "typeIdentifier": "t_contract$_ISuperAgreement_$32189",
+                                    "typeString": "contract ISuperAgreement"
+                                  }
+                                ],
+                                "id": 55,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": true,
+                                "lValueRequested": false,
+                                "nodeType": "ElementaryTypeNameExpression",
+                                "src": "1541:7:0",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_type$_t_address_$",
+                                  "typeString": "type(address)"
+                                },
+                                "typeName": {
+                                  "id": 54,
+                                  "name": "address",
+                                  "nodeType": "ElementaryTypeName",
+                                  "src": "1541:7:0",
+                                  "typeDescriptions": {}
+                                }
+                              },
+                              "id": 62,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "kind": "typeConversion",
+                              "lValueRequested": false,
+                              "nameLocations": [],
+                              "names": [],
+                              "nodeType": "FunctionCall",
+                              "src": "1541:242:0",
+                              "tryCall": false,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            ],
+                            "id": 53,
+                            "name": "IConstantFlowAgreementV1",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 31699,
+                            "src": "1499:24:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_contract$_IConstantFlowAgreementV1_$31699_$",
+                              "typeString": "type(contract IConstantFlowAgreementV1)"
+                            }
+                          },
+                          "id": 63,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "nameLocations": [],
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1499:298:0",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_IConstantFlowAgreementV1_$31699",
+                            "typeString": "contract IConstantFlowAgreementV1"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_contract$_ISuperfluid_$33353",
+                            "typeString": "contract ISuperfluid"
+                          },
+                          {
+                            "typeIdentifier": "t_contract$_IConstantFlowAgreementV1_$31699",
+                            "typeString": "contract IConstantFlowAgreementV1"
+                          }
+                        ],
+                        "expression": {
+                          "id": 50,
+                          "name": "CFAv1Library",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 31319,
+                          "src": "1363:12:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_contract$_CFAv1Library_$31319_$",
+                            "typeString": "type(library CFAv1Library)"
+                          }
+                        },
+                        "id": 51,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberLocation": "1376:8:0",
+                        "memberName": "InitData",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 30154,
+                        "src": "1363:21:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_struct$_InitData_$30154_storage_ptr_$",
+                          "typeString": "type(struct CFAv1Library.InitData storage pointer)"
+                        }
+                      },
+                      "id": 64,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "structConstructorCall",
+                      "lValueRequested": false,
+                      "nameLocations": [],
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1363:444:0",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_InitData_$30154_memory_ptr",
+                        "typeString": "struct CFAv1Library.InitData memory"
+                      }
+                    },
+                    "src": "1355:452:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_InitData_$30154_storage",
+                      "typeString": "struct CFAv1Library.InitData storage ref"
+                    }
+                  },
+                  "id": 66,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1355:452:0"
+                }
+              ]
+            },
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "parameters": {
+              "id": 29,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 28,
+                  "mutability": "mutable",
+                  "name": "host",
+                  "nameLocation": "1035:4:0",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 68,
+                  "src": "1023:16:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_ISuperfluid_$33353",
+                    "typeString": "contract ISuperfluid"
+                  },
+                  "typeName": {
+                    "id": 27,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 26,
+                      "name": "ISuperfluid",
+                      "nameLocations": [
+                        "1023:11:0"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 33353,
+                      "src": "1023:11:0"
+                    },
+                    "referencedDeclaration": 33353,
+                    "src": "1023:11:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ISuperfluid_$33353",
+                      "typeString": "contract ISuperfluid"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1022:18:0"
+            },
+            "returnParameters": {
+              "id": 30,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1041:0:0"
+            },
+            "scope": 132,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "id": 90,
+            "nodeType": "FunctionDefinition",
+            "src": "1820:231:0",
+            "body": {
+              "id": 89,
+              "nodeType": "Block",
+              "src": "1973:78:0",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 83,
+                        "name": "sender",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 70,
+                        "src": "2010:6:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "id": 84,
+                        "name": "receiver",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 72,
+                        "src": "2018:8:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "id": 85,
+                        "name": "token",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 75,
+                        "src": "2028:5:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_ISuperfluidToken_$33768",
+                          "typeString": "contract ISuperfluidToken"
+                        }
+                      },
+                      {
+                        "id": 86,
+                        "name": "flowRate",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 77,
+                        "src": "2035:8:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_int96",
+                          "typeString": "int96"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_contract$_ISuperfluidToken_$33768",
+                          "typeString": "contract ISuperfluidToken"
+                        },
+                        {
+                          "typeIdentifier": "t_int96",
+                          "typeString": "int96"
+                        }
+                      ],
+                      "expression": {
+                        "id": 80,
+                        "name": "cfaV1",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 25,
+                        "src": "1983:5:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_InitData_$30154_storage",
+                          "typeString": "struct CFAv1Library.InitData storage ref"
+                        }
+                      },
+                      "id": 82,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "1989:20:0",
+                      "memberName": "createFlowByOperator",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 30620,
+                      "src": "1983:26:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_InitData_$30154_storage_ptr_$_t_address_$_t_address_$_t_contract$_ISuperfluidToken_$33768_$_t_int96_$returns$_t_bytes_memory_ptr_$bound_to$_t_struct$_InitData_$30154_storage_ptr_$",
+                        "typeString": "function (struct CFAv1Library.InitData storage pointer,address,address,contract ISuperfluidToken,int96) returns (bytes memory)"
+                      }
+                    },
+                    "id": 87,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1983:61:0",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_memory_ptr",
+                      "typeString": "bytes memory"
+                    }
+                  },
+                  "id": 88,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1983:61:0"
+                }
+              ]
+            },
+            "functionSelector": "8aaf4513",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "createFlowByOperatorTest",
+            "nameLocation": "1829:24:0",
+            "parameters": {
+              "id": 78,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 70,
+                  "mutability": "mutable",
+                  "name": "sender",
+                  "nameLocation": "1871:6:0",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 90,
+                  "src": "1863:14:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 69,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1863:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 72,
+                  "mutability": "mutable",
+                  "name": "receiver",
+                  "nameLocation": "1895:8:0",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 90,
+                  "src": "1887:16:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 71,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1887:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 75,
+                  "mutability": "mutable",
+                  "name": "token",
+                  "nameLocation": "1930:5:0",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 90,
+                  "src": "1913:22:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_ISuperfluidToken_$33768",
+                    "typeString": "contract ISuperfluidToken"
+                  },
+                  "typeName": {
+                    "id": 74,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 73,
+                      "name": "ISuperfluidToken",
+                      "nameLocations": [
+                        "1913:16:0"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 33768,
+                      "src": "1913:16:0"
+                    },
+                    "referencedDeclaration": 33768,
+                    "src": "1913:16:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ISuperfluidToken_$33768",
+                      "typeString": "contract ISuperfluidToken"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 77,
+                  "mutability": "mutable",
+                  "name": "flowRate",
+                  "nameLocation": "1951:8:0",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 90,
+                  "src": "1945:14:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int96",
+                    "typeString": "int96"
+                  },
+                  "typeName": {
+                    "id": 76,
+                    "name": "int96",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1945:5:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int96",
+                      "typeString": "int96"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1853:112:0"
+            },
+            "returnParameters": {
+              "id": 79,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1973:0:0"
+            },
+            "scope": 132,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "id": 112,
+            "nodeType": "FunctionDefinition",
+            "src": "2057:231:0",
+            "body": {
+              "id": 111,
+              "nodeType": "Block",
+              "src": "2210:78:0",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 105,
+                        "name": "sender",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 92,
+                        "src": "2247:6:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "id": 106,
+                        "name": "receiver",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 94,
+                        "src": "2255:8:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "id": 107,
+                        "name": "token",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 97,
+                        "src": "2265:5:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_ISuperfluidToken_$33768",
+                          "typeString": "contract ISuperfluidToken"
+                        }
+                      },
+                      {
+                        "id": 108,
+                        "name": "flowRate",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 99,
+                        "src": "2272:8:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_int96",
+                          "typeString": "int96"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_contract$_ISuperfluidToken_$33768",
+                          "typeString": "contract ISuperfluidToken"
+                        },
+                        {
+                          "typeIdentifier": "t_int96",
+                          "typeString": "int96"
+                        }
+                      ],
+                      "expression": {
+                        "id": 102,
+                        "name": "cfaV1",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 25,
+                        "src": "2220:5:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_InitData_$30154_storage",
+                          "typeString": "struct CFAv1Library.InitData storage ref"
+                        }
+                      },
+                      "id": 104,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "2226:20:0",
+                      "memberName": "updateFlowByOperator",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 30779,
+                      "src": "2220:26:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_InitData_$30154_storage_ptr_$_t_address_$_t_address_$_t_contract$_ISuperfluidToken_$33768_$_t_int96_$returns$_t_bytes_memory_ptr_$bound_to$_t_struct$_InitData_$30154_storage_ptr_$",
+                        "typeString": "function (struct CFAv1Library.InitData storage pointer,address,address,contract ISuperfluidToken,int96) returns (bytes memory)"
+                      }
+                    },
+                    "id": 109,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2220:61:0",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_memory_ptr",
+                      "typeString": "bytes memory"
+                    }
+                  },
+                  "id": 110,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2220:61:0"
+                }
+              ]
+            },
+            "functionSelector": "80f742fa",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "updateFlowByOperatorTest",
+            "nameLocation": "2066:24:0",
+            "parameters": {
+              "id": 100,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 92,
+                  "mutability": "mutable",
+                  "name": "sender",
+                  "nameLocation": "2108:6:0",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 112,
+                  "src": "2100:14:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 91,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2100:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 94,
+                  "mutability": "mutable",
+                  "name": "receiver",
+                  "nameLocation": "2132:8:0",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 112,
+                  "src": "2124:16:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 93,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2124:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 97,
+                  "mutability": "mutable",
+                  "name": "token",
+                  "nameLocation": "2167:5:0",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 112,
+                  "src": "2150:22:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_ISuperfluidToken_$33768",
+                    "typeString": "contract ISuperfluidToken"
+                  },
+                  "typeName": {
+                    "id": 96,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 95,
+                      "name": "ISuperfluidToken",
+                      "nameLocations": [
+                        "2150:16:0"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 33768,
+                      "src": "2150:16:0"
+                    },
+                    "referencedDeclaration": 33768,
+                    "src": "2150:16:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ISuperfluidToken_$33768",
+                      "typeString": "contract ISuperfluidToken"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 99,
+                  "mutability": "mutable",
+                  "name": "flowRate",
+                  "nameLocation": "2188:8:0",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 112,
+                  "src": "2182:14:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int96",
+                    "typeString": "int96"
+                  },
+                  "typeName": {
+                    "id": 98,
+                    "name": "int96",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2182:5:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int96",
+                      "typeString": "int96"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2090:112:0"
+            },
+            "returnParameters": {
+              "id": 101,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2210:0:0"
+            },
+            "scope": 132,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "id": 131,
+            "nodeType": "FunctionDefinition",
+            "src": "2294:193:0",
+            "body": {
+              "id": 130,
+              "nodeType": "Block",
+              "src": "2419:68:0",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 125,
+                        "name": "sender",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 114,
+                        "src": "2456:6:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "id": 126,
+                        "name": "receiver",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 116,
+                        "src": "2464:8:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "id": 127,
+                        "name": "token",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 119,
+                        "src": "2474:5:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_ISuperfluidToken_$33768",
+                          "typeString": "contract ISuperfluidToken"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_contract$_ISuperfluidToken_$33768",
+                          "typeString": "contract ISuperfluidToken"
+                        }
+                      ],
+                      "expression": {
+                        "id": 122,
+                        "name": "cfaV1",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 25,
+                        "src": "2429:5:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_InitData_$30154_storage",
+                          "typeString": "struct CFAv1Library.InitData storage ref"
+                        }
+                      },
+                      "id": 124,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "2435:20:0",
+                      "memberName": "deleteFlowByOperator",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 30935,
+                      "src": "2429:26:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_InitData_$30154_storage_ptr_$_t_address_$_t_address_$_t_contract$_ISuperfluidToken_$33768_$returns$_t_bytes_memory_ptr_$bound_to$_t_struct$_InitData_$30154_storage_ptr_$",
+                        "typeString": "function (struct CFAv1Library.InitData storage pointer,address,address,contract ISuperfluidToken) returns (bytes memory)"
+                      }
+                    },
+                    "id": 128,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2429:51:0",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_memory_ptr",
+                      "typeString": "bytes memory"
+                    }
+                  },
+                  "id": 129,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2429:51:0"
+                }
+              ]
+            },
+            "functionSelector": "ef707490",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "deleteFlowByOperator",
+            "nameLocation": "2303:20:0",
+            "parameters": {
+              "id": 120,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 114,
+                  "mutability": "mutable",
+                  "name": "sender",
+                  "nameLocation": "2341:6:0",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 131,
+                  "src": "2333:14:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 113,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2333:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 116,
+                  "mutability": "mutable",
+                  "name": "receiver",
+                  "nameLocation": "2365:8:0",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 131,
+                  "src": "2357:16:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 115,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2357:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 119,
+                  "mutability": "mutable",
+                  "name": "token",
+                  "nameLocation": "2400:5:0",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 131,
+                  "src": "2383:22:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_ISuperfluidToken_$33768",
+                    "typeString": "contract ISuperfluidToken"
+                  },
+                  "typeName": {
+                    "id": 118,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 117,
+                      "name": "ISuperfluidToken",
+                      "nameLocations": [
+                        "2383:16:0"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 33768,
+                      "src": "2383:16:0"
+                    },
+                    "referencedDeclaration": 33768,
+                    "src": "2383:16:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ISuperfluidToken_$33768",
+                      "typeString": "contract ISuperfluidToken"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2323:88:0"
+            },
+            "returnParameters": {
+              "id": 121,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2419:0:0"
+            },
+            "scope": 132,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "CFANFT",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          132
+        ],
+        "name": "CFANFT",
+        "nameLocation": "735:6:0",
+        "scope": 133,
+        "usedErrors": []
+      }
+    ],
+    "license": "UNLICENSED"
+  },
+  "id": 0
+}

@@ -1,0 +1,94 @@
+{
+  "abi": [],
+  "bytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "ast": {
+    "absolutePath": "test/foundry/CFANFT.t.sol",
+    "id": 41870,
+    "exportedSymbols": {
+      "CommonBase": [
+        4584
+      ],
+      "DSTest": [
+        4531
+      ],
+      "StdAssertions": [
+        5400
+      ],
+      "StdChains": [
+        5936
+      ],
+      "StdCheats": [
+        7874
+      ],
+      "StdStorage": [
+        8781
+      ],
+      "StdUtils": [
+        10846
+      ],
+      "Test": [
+        10891
+      ],
+      "TestBase": [
+        10878
+      ],
+      "Vm": [
+        12048
+      ],
+      "console": [
+        20112
+      ],
+      "console2": [
+        28208
+      ],
+      "stdError": [
+        7940
+      ],
+      "stdJson": [
+        8607
+      ],
+      "stdMath": [
+        8749
+      ],
+      "stdStorage": [
+        10215
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "39:55:49",
+    "nodes": [
+      {
+        "id": 41868,
+        "nodeType": "PragmaDirective",
+        "src": "39:24:49",
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".13"
+        ]
+      },
+      {
+        "id": 41869,
+        "nodeType": "ImportDirective",
+        "src": "65:28:49",
+        "absolutePath": "lib/forge-std/src/Test.sol",
+        "file": "forge-std/Test.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 41870,
+        "sourceUnit": 10892,
+        "symbolAliases": [],
+        "unitAlias": ""
+      }
+    ],
+    "license": "UNLICENSED"
+  },
+  "id": 49
+}
