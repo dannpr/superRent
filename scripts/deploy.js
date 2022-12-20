@@ -5,16 +5,16 @@
 // will compile your contracts, add the Hardhat Runtime Environment's members to the
 // global scope, and execute the script.
 const hre = require("hardhat");
+const { parseJson, toWei } = require("ethereumjs-util"); // bad practice to use ethereumjs-util in production
+const { use, deploy } = require("hardhat/transaction"); // bad practice to use hardhat/transaction in production
+const { ethers } = require("hardhat");
 
 async function main() {
 
-  const USDC = "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48";
+  const contractJson = parseJson("deployments/goerli/ERC721.json");
+  const contract = await deploy(contractJson, "ERC721", "NFT", "NFT");
+  console.log(`ERC721 deployed to ${contract.address}`);
 
-  await lock.deployed();
-
-  console.log(
-    `Lock with 1 ETH and unlock timestamp ${unlockTime} deployed to ${lock.address}`
-  );
 }
 
 // We recommend this pattern to be able to use async/await everywhere

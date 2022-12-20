@@ -6,4 +6,10 @@ test = 'test/foundry'
 cache_path  = 'forge-cache'
 gas_reports = ["*"]
 
+[rpc_endpoints]
+goerli = "${GOERLI_RPC_URL}"
+
+[etherscan]
+goerli = { key = "${ETHERSCAN_KEY}" }
+
 # See more config options https://book.getfoundry.sh/reference/config.html
