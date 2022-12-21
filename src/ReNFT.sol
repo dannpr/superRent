@@ -1,13 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.16;
 
-import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
-import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
-import "@openzeppelin/contracts/token/ERC1155/IERC1155.sol";
-import "@openzeppelin/contracts/token/ERC721/utils/ERC721Holder.sol";
-import "@openzeppelin/contracts/token/ERC1155/utils/ERC1155Receiver.sol";
-import "@openzeppelin/contracts/token/ERC1155/utils/ERC1155Holder.sol";
+
 import "./IReNFT.sol";
 import "./IResolver.sol";
 
@@ -106,10 +100,9 @@ contract ReNFT is IReNft, ERC721Holder, ERC1155Receiver, ERC1155Holder {
         admin = _admin;
     }
 
-    function bundleCall(
-        function(CallData memory) _handler,
-        CallData memory _cd
-    ) private {
+    function bundleCall(function(CallData memory) _handler, CallData memory _cd)
+        private
+    {
         require(_cd.nfts.length > 0, "ReNFT::no nfts");
         while (_cd.right != _cd.nfts.length) {
             if (
@@ -199,10 +192,10 @@ contract ReNFT is IReNft, ERC721Holder, ERC1155Receiver, ERC1155Holder {
     //      .-.     .-.     .-.     .-.     .-.     .-.     .-.     .-.     .-.     .-.
     // `._.'   `._.'   `._.'   `._.'   `._.'   `._.'   `._.'   `._.'   `._.'   `._.'   `._.'
 
-    function takeFee(
-        uint256 _rent,
-        IResolver.PaymentToken _paymentToken
-    ) private returns (uint256 fee) {
+    function takeFee(uint256 _rent, IResolver.PaymentToken _paymentToken)
+        private
+        returns (uint256 fee)
+    {
         fee = _rent * rentFee;
         fee /= 10000;
         uint8 paymentTokenIx = uint8(_paymentToken);
@@ -220,7 +213,7 @@ contract ReNFT is IReNft, ERC721Holder, ERC1155Receiver, ERC1155Holder {
         address paymentToken = resolver.getPaymentToken(paymentTokenIx);
         uint256 decimals = ERC20(paymentToken).decimals();
 
-        uint256 scale = 10 ** decimals;
+        uint256 scale = 10**decimals;
         uint256 nftPrice = _lendingRenting.lending.lentAmount *
             unpackPrice(_lendingRenting.lending.nftPrice, scale);
         uint256 rentPrice = unpackPrice(
@@ -256,15 +249,15 @@ contract ReNFT is IReNft, ERC721Holder, ERC1155Receiver, ERC1155Holder {
         );
     }
 
-    function distributeClaimPayment(
-        LendingRenting memory _lendingRenting
-    ) private {
+    function distributeClaimPayment(LendingRenting memory _lendingRenting)
+        private
+    {
         uint8 paymentTokenIx = uint8(_lendingRenting.lending.paymentToken);
         ensureTokenNotSentinel(paymentTokenIx);
         ERC20 paymentToken = ERC20(resolver.getPaymentToken(paymentTokenIx));
 
         uint256 decimals = ERC20(paymentToken).decimals();
-        uint256 scale = 10 ** decimals;
+        uint256 scale = 10**decimals;
         uint256 nftPrice = _lendingRenting.lending.lentAmount *
             unpackPrice(_lendingRenting.lending.nftPrice, scale);
         uint256 rentPrice = unpackPrice(
@@ -392,7 +385,7 @@ contract ReNFT is IReNft, ERC721Holder, ERC1155Receiver, ERC1155Holder {
             uint256 decimals = ERC20(paymentToken).decimals();
 
             {
-                uint256 scale = 10 ** decimals;
+                uint256 scale = 10**decimals;
                 uint256 rentPrice = _cd.rentDurations[i] *
                     unpackPrice(item.lending.dailyRentPrice, scale);
                 uint256 nftPrice = item.lending.lentAmount *
@@ -606,10 +599,11 @@ contract ReNFT is IReNft, ERC721Holder, ERC1155Receiver, ERC1155Holder {
         });
     }
 
-    function unpackPrice(
-        bytes4 _price,
-        uint256 _scale
-    ) private pure returns (uint256) {
+    function unpackPrice(bytes4 _price, uint256 _scale)
+        private
+        pure
+        returns (uint256)
+    {
         ensureIsUnpackablePrice(_price, _scale);
 
         uint16 whole = uint16(bytes2(_price));
@@ -724,27 +718,27 @@ contract ReNFT is IReNft, ERC721Holder, ERC1155Receiver, ERC1155Holder {
         );
     }
 
-    function ensureIsStoppable(
-        Lending memory _lending,
-        address _msgSender
-    ) private pure {
+    function ensureIsStoppable(Lending memory _lending, address _msgSender)
+        private
+        pure
+    {
         require(_lending.lenderAddress == _msgSender, "ReNFT::not lender");
     }
 
-    function ensureIsClaimable(
-        Renting memory _renting,
-        uint256 _blockTimestamp
-    ) private pure {
+    function ensureIsClaimable(Renting memory _renting, uint256 _blockTimestamp)
+        private
+        pure
+    {
         require(
             isPastReturnDate(_renting, _blockTimestamp),
             "ReNFT::return date not passed"
         );
     }
 
-    function ensureIsUnpackablePrice(
-        bytes4 _price,
-        uint256 _scale
-    ) private pure {
+    function ensureIsUnpackablePrice(bytes4 _price, uint256 _scale)
+        private
+        pure
+    {
         require(uint32(_price) > 0, "ReNFT::invalid price");
         require(_scale >= 10000, "ReNFT::invalid scale");
     }
@@ -753,10 +747,11 @@ contract ReNFT is IReNft, ERC721Holder, ERC1155Receiver, ERC1155Holder {
         require(_paymentIx > 0, "ReNFT::token is sentinel");
     }
 
-    function isPastReturnDate(
-        Renting memory _renting,
-        uint256 _now
-    ) private pure returns (bool) {
+    function isPastReturnDate(Renting memory _renting, uint256 _now)
+        private
+        pure
+        returns (bool)
+    {
         require(_now > _renting.rentedAt, "ReNFT::now before rented");
         return
             _now - _renting.rentedAt > _renting.rentDuration * SECONDS_IN_DAY;
@@ -770,9 +765,10 @@ contract ReNFT is IReNft, ERC721Holder, ERC1155Receiver, ERC1155Holder {
         rentFee = _rentFee;
     }
 
-    function setBeneficiary(
-        address payable _newBeneficiary
-    ) external onlyAdmin {
+    function setBeneficiary(address payable _newBeneficiary)
+        external
+        onlyAdmin
+    {
         beneficiary = _newBeneficiary;
     }
 
