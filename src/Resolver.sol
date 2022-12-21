@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.16;
 
-import "../interfaces/IResolver.sol";
+import "./IResolver.sol";
 
 contract Resolver is IResolver {
     address private admin;
