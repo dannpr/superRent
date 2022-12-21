@@ -14,6 +14,8 @@ contract NFTRentRouter {
     // the logic to integrate superTokens
     IResolver public resolver;
 
+    ISuperToken public daix;
+
     constructor() {
         // Retrieve renft & resolver using ReNFT V1 address
         renft = IReNft(address(0x94D8f036a0fbC216Bb532D33bDF6564157Af0cD7));
@@ -22,29 +24,27 @@ contract NFTRentRouter {
         );
     }
 
-    function createFlowByOperatorTest(
-        address sender,
+    function createFlowFromContract(
+        ISuperToken token,
         address receiver,
-        ISuperfluidToken token,
         int96 flowRate
-    ) public {
-        cfaV1.createFlowByOperator(sender, receiver, token, flowRate);
+    ) external {
+        token.createFlow(receiver, flowRate);
     }
 
     function updateFlowByOperatorTest(
-        address sender,
         address receiver,
-        ISuperfluidToken token,
+        ISuperToken token,
         int96 flowRate
     ) public {
-        cfaV1.updateFlowByOperator(sender, receiver, token, flowRate);
+        token.updateFlow(receiver, flowRate);
     }
 
     function deleteFlowByOperator(
         address sender,
         address receiver,
-        ISuperfluidToken token
+        ISuperToken token
     ) public {
-        cfaV1.deleteFlowByOperator(sender, receiver, token);
+        token.deleteFlow(sender, receiver);
     }
 }
