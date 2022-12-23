@@ -1,5 +1,4 @@
 ds-test/=lib/forge-std/lib/ds-test/src/
-ethereum-contracts/=lib/ethereum-contracts/
 forge-std/=lib/forge-std/src/
 @openzeppelin/=lib/openzeppelin-contracts/
 erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/

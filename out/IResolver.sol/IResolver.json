@@ -1,0 +1,326 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint8",
+          "name": "_pt",
+          "type": "uint8"
+        }
+      ],
+      "name": "getPaymentToken",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint8",
+          "name": "_pt",
+          "type": "uint8"
+        },
+        {
+          "internalType": "address",
+          "name": "_v",
+          "type": "address"
+        }
+      ],
+      "name": "setPaymentToken",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "getPaymentToken(uint8)": "c6ee427f",
+    "setPaymentToken(uint8,address)": "321c6aea"
+  },
+  "ast": {
+    "absolutePath": "src/IResolver.sol",
+    "id": 1975,
+    "exportedSymbols": {
+      "IResolver": [
+        1974
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:316:17",
+    "nodes": [
+      {
+        "id": 1951,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:17",
+        "literals": [
+          "solidity",
+          "=",
+          "0.8",
+          ".6"
+        ]
+      },
+      {
+        "id": 1974,
+        "nodeType": "ContractDefinition",
+        "src": "57:290:17",
+        "nodes": [
+          {
+            "id": 1959,
+            "nodeType": "EnumDefinition",
+            "src": "83:125:17",
+            "canonicalName": "IResolver.PaymentToken",
+            "members": [
+              {
+                "id": 1952,
+                "name": "SENTINEL",
+                "nameLocation": "111:8:17",
+                "nodeType": "EnumValue",
+                "src": "111:8:17"
+              },
+              {
+                "id": 1953,
+                "name": "WETH",
+                "nameLocation": "129:4:17",
+                "nodeType": "EnumValue",
+                "src": "129:4:17"
+              },
+              {
+                "id": 1954,
+                "name": "DAI",
+                "nameLocation": "143:3:17",
+                "nodeType": "EnumValue",
+                "src": "143:3:17"
+              },
+              {
+                "id": 1955,
+                "name": "USDC",
+                "nameLocation": "156:4:17",
+                "nodeType": "EnumValue",
+                "src": "156:4:17"
+              },
+              {
+                "id": 1956,
+                "name": "USDT",
+                "nameLocation": "170:4:17",
+                "nodeType": "EnumValue",
+                "src": "170:4:17"
+              },
+              {
+                "id": 1957,
+                "name": "TUSD",
+                "nameLocation": "184:4:17",
+                "nodeType": "EnumValue",
+                "src": "184:4:17"
+              },
+              {
+                "id": 1958,
+                "name": "RENT",
+                "nameLocation": "198:4:17",
+                "nodeType": "EnumValue",
+                "src": "198:4:17"
+              }
+            ],
+            "name": "PaymentToken",
+            "nameLocation": "88:12:17"
+          },
+          {
+            "id": 1966,
+            "nodeType": "FunctionDefinition",
+            "src": "214:68:17",
+            "functionSelector": "c6ee427f",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getPaymentToken",
+            "nameLocation": "223:15:17",
+            "parameters": {
+              "id": 1962,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1961,
+                  "mutability": "mutable",
+                  "name": "_pt",
+                  "nameLocation": "245:3:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1966,
+                  "src": "239:9:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 1960,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "239:5:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "238:11:17"
+            },
+            "returnParameters": {
+              "id": 1965,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1964,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1966,
+                  "src": "273:7:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1963,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "273:7:17",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "272:9:17"
+            },
+            "scope": 1974,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 1973,
+            "nodeType": "FunctionDefinition",
+            "src": "288:57:17",
+            "functionSelector": "321c6aea",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setPaymentToken",
+            "nameLocation": "297:15:17",
+            "parameters": {
+              "id": 1971,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1968,
+                  "mutability": "mutable",
+                  "name": "_pt",
+                  "nameLocation": "319:3:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1973,
+                  "src": "313:9:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 1967,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "313:5:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1970,
+                  "mutability": "mutable",
+                  "name": "_v",
+                  "nameLocation": "332:2:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1973,
+                  "src": "324:10:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1969,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "324:7:17",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "312:23:17"
+            },
+            "returnParameters": {
+              "id": 1972,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "344:0:17"
+            },
+            "scope": 1974,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          1974
+        ],
+        "name": "IResolver",
+        "nameLocation": "67:9:17",
+        "scope": 1975,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 17
+}
