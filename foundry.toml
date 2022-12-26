@@ -5,7 +5,7 @@ libs = ['lib']
 test = 'test'
 cache_path  = 'forge-cache'
 gas_reports = ["*"]
-solc_version = "0.8.6"
+solc_version = "0.8.16"
 
 [rpc_endpoints]
 goerli = "${GOERLI_RPC_URL}"

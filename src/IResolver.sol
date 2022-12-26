@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity =0.8.6;
+pragma solidity ^0.8.16;
 
 interface IResolver {
     enum PaymentToken {
@@ -9,7 +9,8 @@ interface IResolver {
         USDC,
         USDT,
         TUSD,
-        RENT
+        RENT,
+        USDCx
     }
 
     function getPaymentToken(uint8 _pt) external view returns (address);
