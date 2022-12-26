@@ -13,7 +13,7 @@ import "./IResolver.sol";
 import "./IReNFT.sol";
 
 import {ISuperfluid, ISuperToken, ISuperApp} from "../lib/ethereum-contracts/packages/ethereum-contracts/contracts/interfaces/superfluid/ISuperfluid.sol";
-import {SuperTokenV1Library} from "../lib/ethereum-contracts/packages/ethereum-contracts/contracts/interfaces/superfluid/SuperTokenV1Library.sol";
+import {SuperTokenV1Library} from "../lib/ethereum-contracts/packages/ethereum-contracts/contracts/apps/SuperTokenV1Library.sol";
 
 //              @@@@@@@@@@@@@@@@        ,@@@@@@@@@@@@@@@@
 //              @@@,,,,,,,,,,@@@        ,@@&,,,,,,,,,,@@@
