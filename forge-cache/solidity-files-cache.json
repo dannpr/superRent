@@ -1104,8 +1104,8 @@
       }
     },
     "script/ReNFT.s.sol": {
-      "lastModificationDate": 1672075098392,
-      "contentHash": "157f94b287b7d0c11530f26ccba777d0",
+      "lastModificationDate": 1672086930333,
+      "contentHash": "583582f1d0c3d8a9782debbee5d312ef",
       "sourceName": "script/ReNFT.s.sol",
       "solcConfig": {
         "settings": {
@@ -1166,7 +1166,7 @@
         "src/ReNFT.sol",
         "src/Resolver.sol"
       ],
-      "versionRequirement": "^0.8.6",
+      "versionRequirement": "=0.8.6",
       "artifacts": {
         "ReNFTScript": {
           "0.8.6+commit.11564f7e.Darwin.appleclang": "ReNFT.s.sol/ReNFTScript.json"
